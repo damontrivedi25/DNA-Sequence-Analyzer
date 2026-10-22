@@ -2,7 +2,7 @@
 
 ## About the Project
 
-    TheCellCoded DNA Sequence Analyzer is a python built project that is explore how computer science ties into genetic
+TheCellCoded DNA Sequence Analyzer is a python built project that is explore how computer science ties into genetic
 algorithms. DNA contains instructions on characterists and traits that we have, and this project demonstrates how programming can help us understand these sequences.
     Using python, I developed a program that validates DNA sequences, determines the number of each nuecleotide,
 the percentage of the G and C nueclotides, and a comparison to a different strand to determine if any substitutions occured.
