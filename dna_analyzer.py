@@ -49,12 +49,34 @@ def complementary_dna(sequence):
     return result
 
 # Function 5
-def detect_mutations(original, mutated):
+def detect_subsitutions(original, mutated):
     mutations = []
     for i in range(len(original)):
         if original[i] != mutated[i]:
             mutations.append(i)
     return mutations 
+
+# Function 6
+def detect_deletions(original, mutated):
+    position = 0
+    for i in original:
+        if original[:position] + original[position + 1:] == mutated:
+            return position
+        else:
+            position += 1
+
+# Function 7
+def detect_insertions(original, mutated):
+    position = 0
+    for i in mutated:
+        if mutated[:position] + mutated[position + 1:] == original:
+            return position
+        else:
+            position += 1
+
+    
+
+
 
 
 # Stage 6: Main Program
@@ -83,13 +105,15 @@ if y == True:
     mutated = input('Enter Your Comparison DNA Sequence: ')
     if valid_dna(mutated) == True:
         if len(mutated) == len(sequence):
-            mutated_positions = detect_mutations(sequence, mutated)
+            mutated_positions = detect_subsitutions(sequence, mutated)
             if mutated_positions == []:
                 print('No Mutations Detected!')
             else:
                 print('Mutations detected at indices', mutated_positions)
+        elif len(mutated) > len(sequence):
+            print('A Insertion occurs at index', detect_insertions(sequence, mutated))
         else:
-            print('Comparison DNA is not proper length')
+            print('A Deletion occurs at index', detect_deletions(sequence, mutated))
     else:
         print('Comparison DNA invalid')
 
