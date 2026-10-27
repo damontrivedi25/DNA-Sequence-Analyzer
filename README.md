@@ -20,6 +20,10 @@ the percentage of the G and C nueclotides, and a comparison to a different stran
 
 5) Mutation Detection: Compares two DNA sequences of equal length and identifies the indices where their nucleotides differ(subsitutions)
 
+6) Deletion Detection: Compares two DNA sequences and determines the index/position in which if there a deletion in your comparision DNA
+
+7) Insertion Detection: Compares your orignal DNA to a comparison strand and determines the index, if any, in which and added nucelotide is added.
+
 ## How to Run
 
 1. Make sure Python 3 is installed on your computer.
